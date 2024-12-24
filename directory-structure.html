@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Explorer</title>
+    <style>
+        ul { list-style-type: none; }
+        li { margin-left: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Directory Explorer</h1>
+    <div id="directory-container"></div>
+    <script>
+        const renderDirectory = (data, parent) => {
+            const ul = document.createElement("ul");
+            for (const key in data) {
+                const li = document.createElement("li");
+                li.textContent = key;
+                if (data[key] !== null) {
+                    renderDirectory(data[key], li);
+                }
+                ul.appendChild(li);
+            }
+            parent.appendChild(ul);
+        };
+
+        fetch("directory-structure.json")
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById("directory-container");
+                renderDirectory(data, container);
+            })
+            .catch(error => console.error("Errore nel caricamento della struttura:", error));
+    </script>
+</body>
+</html>
