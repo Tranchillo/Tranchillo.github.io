@@ -1,0 +1,62 @@
+/* Contenitore della mucca */
+#cow-container {
+    position: absolute;
+    bottom: 3%; /* Altezza iniziale relativa al footer */
+    left: 50%;
+    transform: translate(-50%, 0); /* Centra orizzontalmente */
+    width: 100px;
+    max-width: 300px;
+    height: auto;
+    z-index: 10;
+    transition: transform 0.3s ease, left 0.3s ease;
+    opacity: 1; /* Opacità piena */
+}
+
+/* Video della mucca */
+#cow-video {
+    width: 100%; /* Adatta alla larghezza del contenitore */
+    height: auto;
+    display: block;
+}
+
+/* Contenitore dell'UFO */
+#ufo-container {
+    position: absolute;
+    top: -200px; /* Fuori dallo schermo */
+    left: 50%;
+    transform: translate(-50%, 0); /* Centra orizzontalmente */
+    width: 276px; 
+    display: none; /* L'UFO sarà visibile solo quando necessario */
+}
+
+#ufo-video {
+    position: absolute;
+    top: -300px; /* Partenza fuori schermo */
+    left: 50%; /* Centro orizzontale */
+    transform: translate(-50%, 0); /* Centra rispetto alla posizione */
+    z-index: 12; /* Sopra la mucca */
+    width: 276px;  /* Dimensione stabile */
+    display: none; /* Nascondi fino all'attivazione */
+    transition: top 5s ease-in-out; /* Animazione fluida in 5 secondi */
+}
+
+/* Contenitore del raggio traente */
+#beam {
+    position: absolute;
+    width: 200px; /* Dimensioni personalizzabili */
+    height: auto;
+    left: 50%; /* Allinea al centro orizzontale dell'UFO */
+    transform: translate(-50%, 0); /* Centra orizzontalmente */
+    z-index: 11; /* Tra mucca (10) e UFO (12) */
+    display: none; /* Nascondi fino all'attivazione */
+}
+
+/* Video del raggio traente */
+#beam-video {
+    position: absolute;
+    left: 50%; /* Centra il raggio orizzontalmente rispetto all'UFO */
+    transform: translate(-50%, 0); /* Centra rispetto all'asse orizzontale */
+    width: 200px; /* Dimensioni adattabili */
+    display: none; /* Nascondi fino all'attivazione */
+    z-index: 11; /* Sotto l'UFO */
+}

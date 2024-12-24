@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+ <head>
+  <!-- Meta -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>LoRA - Dany Tranchillo</title>
+   
+  <!-- Favicon -->
+   <link rel="icon" href="assets/favicon/favicon-16x16.ico" sizes="16x16" type="image/x-icon">
+   <link rel="icon" href="assets/favicon/favicon-32x32.ico" sizes="32x32" type="image/x-icon">
+   <link rel="icon" href="assets/favicon/favicon-48x48.ico" sizes="48x48" type="image/x-icon">
+   
+  <!-- CSS -->
+   <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/info.css">
+   <link rel="stylesheet" href="css/social.css">   
+ </head>
+ <body>
+ 
+  <!-- HEADER -->
+<header class="custom-header">
+    <img src="assets/headers/dany-tranchillo.png" alt="Dany Tranchillo" class="header-image">
+</header>
+
+    <!-- MENU -->
+   <nav>
+    <ul>
+     <li><a href="index.html">Home</a></li>
+     <li><a href="chi-sono.html">Chi Sono</a></li>
+     <li><a href="foto.html">Foto</a></li>
+     <li><a href="video.html">Video</a></li>
+	 <li><a href="lora.html" class="active">LoRA</a></li>
+     <li><a href="music.html">Music</a></li>
+     <li><a href="info.html">Info</a></li>
+     <li><a href="servizi.html">Servizi</a></li>
+     <li><a href="utility.html">Utility</a></li>
+    </ul>
+   </nav>
+
+
+   <!-- CONTENUTO PRINCIPALE -->
+   <main class="content">
+     <div class="main-content">
+      <div class="accordion">
+      <div class="accordion-item">
+       <button class="accordion-header"><img src="assets/icone-info/soldi.png" alt="Icona" />American Dollar Bills</button>
+       <div class="accordion-content">
+        <p><u><a href="https://civitai.com/models/959792/flux-american-dollar-bills" target="_blank"><strong>American Dollar Bills</strong></a></u> è il primo LoRA che ho addestrato per Flux. Questo progetto è stato creato con l'obiettivo di generare immagini realistiche di banconote americane basate sulle principali denominazioni di $1, $2, $5, $10, $20, $50 e $100, sia fronte che retro. È iniziato come un esperimento con una buona idea, ma si è concluso con un risultato imperfetto. Tuttavia, grazie alla mia passione per l'apprendimento e al desiderio di migliorare le mie competenze nella creazione di modelli, nonostante l'inesperienza iniziale, ho compreso cosa fare in futuro per ottenere risultati migliori.</p>
+        <ul>
+         <li><strong>Creazione del Dataset:</strong> Ricerca e selezione online di 150 immagini di banconote americane (fronte e retro) da $1 a $100, incluse alcune in UHD, con ridimensionamento a 1024x1024 pixel.</li>
+         <li><strong>Studio delle Banconote:</strong> Ho approfondito il design delle banconote americane per capirne i dettagli, nonostante la mia inesperienza diretta.</li>
+         <li><strong>Caption Creation:</strong> Utilizzo di BLIP2 su Kohya per generare didascalie automatiche, successivamente revisionate manualmente e ottimizzate con ChatGPT.</li>
+         <li><strong>Analisi del Dataset:</strong> Creazione di uno script Python per verificare lo squilibrio nel dataset, rilevando un eccesso di banconote da $100 e la mancanza di altre denominazioni.</li>
+         <li><strong>Prestazioni del LoRA:</strong> Migliora texture e dettagli su oggetti e personaggi, con risultati più raffinati e credibili in contesti realistici.</li>
+         <li><strong>Considerazioni Finali:</strong> Un progetto sperimentale che ha insegnato molto sul processo di addestramento, con aree di miglioramento come il bilanciamento del dataset e l'ottimizzazione dei processi.</li>
+        </ul>
+       </div>
+      </div>
+      <div class="accordion-item">
+       <button class="accordion-header"><img src="assets/icone-info/habitat.png" alt="Icona" />Habitat</button>
+        <div class="accordion-content">
+         <p><u><a href="https://civitai.com/models/1007637/flux-h4b1t4t" target="_blank"><strong>Habitat</strong></a></u> è uno strumento creativo per rappresentare visivamente i pensieri, i desideri e i ricordi di un personaggio attraverso un habitat simbolico integrato sopra la sua testa. Questo habitat riflette un ideale, un sogno futuro o un ricordo, in contrasto con l'ambiente reale circostante. La dualità visiva che ne deriva crea immagini surreali e narrative, perfette per progetti artistici e di storytelling.</p>
+          <ul>
+           <li><strong>Parola Chiave (Trigger Word):</strong> <code>h4b1t4t</code>, da includere in ogni prompt per attivare l'habitat.</li>
+           <li><strong>Impostazioni Consigliate:</strong> Forza LoRA = 1; habitat proporzionato alla testa e ben integrato.</li>
+           <li><strong>Prompt Esempio:</strong> "Una persona, h4b1t4t, con [habitat] perfettamente integrato nella sua testa, immersa in un ambiente di contrasto realistico."</li>
+           <li><strong>Caratteristiche Principali:</strong>
+          <ul>
+           <li>Integra habitat proporzionati e realistici.</li>
+           <li>Contrasto visivo tra habitat ideale e ambiente reale.</li>
+           <li>Adatto a personaggi con abiti moderni o tradizionali.</li>
+          </ul>
+         </li>
+         <li><strong>Utilizzo Creativo:</strong> Combina ambienti ideali e reali per raccontare storie personali e simboliche.</li>
+        </ul>
+       </div>
+      </div>			 
+     </div>
+    </div>
+   </div>
+</main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <span class="contact-social">Contatti via Social</span>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/tranchillodany" class="social-link" target="_blank"><img src="assets/loghi_social/facebook_logo.png" alt="Facebook Logo"></a>			
+                <a href="https://www.tiktok.com/@tranchillo" class="social-link" target="_blank"><img src="assets/loghi_social/tiktok_logo.png" alt="TikTok Logo"></a>
+                <a href="https://www.youtube.com/@tranchillo" class="social-link" target="_blank"><img src="assets/loghi_social/youtube_logo.png" alt="YouTube Logo"></a>
+                <a href="https://www.instagram.com/danytranchillo/" class="social-link" target="_blank"><img src="assets/loghi_social/instagram_logo.png" alt="Instagram Logo"></a>
+                <a href="https://x.com/danytranchillo" class="social-link" target="_blank"><img src="assets/loghi_social/x_logo.png" alt="X Logo"></a>
+                <a href="https://soundcloud.com/tranchillo" class="social-link" target="_blank"><img src="assets/loghi_social/soundcloud_logo.png" alt="SoundCloud Logo"></a>
+                <a href="https://civitai.com/user/Tranchillo" class="social-link" target="_blank"><img src="assets/loghi_social/civitai_logo.png" alt="Civitai Logo"></a>
+                <a href="https://github.com/Tranchillo" class="social-link" target="_blank"><img src="assets/loghi_social/github_logo.png" alt="GitHub Logo"></a>
+                <a href="https://www.reddit.com/user/Tranchillo/" class="social-link" target="_blank"><img src="assets/loghi_social/reddit_logo.png" alt="Reddit Logo"></a>		
+            </div>
+            <div class="footer-right">
+                <p><nobr>© 2024 Dany Tranchillo. Tutti i diritti riservati.</nobr></p>
+            </div>
+        </div>
+    </footer>
+	
+  <!-- Collegamenti ai file JS -->  
+  <script src="js/info.js"></script>    
+ </body>
+</html>

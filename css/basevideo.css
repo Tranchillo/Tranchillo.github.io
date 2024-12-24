@@ -1,0 +1,352 @@
+/* base.css */
+
+/* Importazione Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+/* Variabili colori */
+:root {
+    --color-white: #fff;
+    --color-text: #333;
+    --color-gray-100: #f8f8f8;
+    --color-gray-200: #f2f2f2;
+    --color-gray-300: #e0e0e0;
+    --color-gray-400: #dedede;
+    --color-gray-500: #d0d0d0;
+    --color-gray-600: #c2c2c2;
+    --header-menu-height: 60px; /* Altezza maggiore per header con maschera */
+}
+
+/* Reset degli stili di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Corpo della pagina */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Blocca lo scorrimento laterale */
+}
+
+/* Titoli */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/* Link */
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #555;
+}
+
+/* Header fisso con maschera di testo */
+.custom-header {
+    position: fixed; /* Mantiene l'header fisso in alto */
+    top: 0;
+    left: 0;
+    width: 100%; /* Occupa tutta la larghezza */
+    height: 60px; /* Altezza configurabile */
+    background-color: #000; /* Sfondo nero per eventuali spazi */
+    z-index: 100; /* Layer condiviso con gli altri elementi */
+}
+
+.header-image {
+    width: 100%; /* L'immagine occupa tutta la larghezza */
+    height: 100%; /* Si adatta all'altezza del contenitore */
+    object-fit: cover; /* Ritaglia l'immagine se necessario per adattarsi */
+    display: block;
+}
+
+/* Menu sotto l'Header */
+nav {
+    position: fixed; /* Mantiene il menu fisso sotto l'header */
+    top: 60px; /* Altezza del header, per posizionare il menu subito sotto */
+    width: 100%;
+    background-color: #fff; /* Corretto in bianco */
+    color: #000; /* Corretto in nero */
+    padding: 10px 0;
+    z-index: 101; /* Assicurati che sia sopra il contenuto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #000; /* Corretto in nero */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 5px 10px;
+}
+
+nav a.active {
+    background-color: var(--color-gray-200); /* Sfondo grigio chiaro */
+    color: #000; /* Testo nero */
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #888;
+    background-color: var(--color-gray-300);
+}
+
+/* Foto Header */
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Footer */
+footer {
+    position: fixed; /* Mantiene il footer fisso */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0; /* Riduci il padding verticale */
+    border-top: 1px solid #fff;
+    z-index: 10; /* Stesso z-index di Header e Menu */
+    height: 40px; /* Altezza ridotta */
+    display: flex; /* Centra il contenuto */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra orizzontalmente */
+    gap: 10px; /* Distanza tra le icone e il testo */
+}
+
+/* Contenuto principale */
+.main-content {
+    flex: 1;
+    margin-top: calc(var(--header-menu-height) + 20px); /* Compensa l'header e menu */
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.content, .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: transparent;
+}
+
+/* Media Queries per design responsivo */
+
+/* Schermi piccoli (smartphone portrait, meno di 576px) */
+@media only screen and (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-image {
+        height: auto;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+}
+
+/* Tablet (da 576px a 768px) */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Schermi grandi (desktop) */
+@media only screen and (min-width: 768px) {
+    .footer-container {
+        justify-content: space-around;
+    }
+}
+
+/* Adattabilità delle immagini e dei video */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* video.css */
+
+/* Corpo della pagina */
+html, body {
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.main-content {
+    flex: 1;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.content {
+    position: relative;
+    margin-top: calc(var(--header-menu-height) + 20px); /* Margine sufficiente */
+    z-index: 1; /* Posizionamento sotto il menu */
+    padding-top: calc(var(--header-menu-height) + 10px);
+    margin: 0 auto;
+    max-width: 90%;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background-color: var(--color-gray-100);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid var(--color-gray-300);
+    width: 30%;
+    max-width: 300px;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    background-color: var(--color-gray-200);
+    transform: translateY(-5px);
+    border-color: var(--color-gray-400);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card img, 
+.skill-card video {
+    max-width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-card img:hover, 
+.skill-card video:hover {
+    transform: scale(1.05);
+}
+
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    color: #000;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .skills-section {
+        justify-content: center; /* Allinea le card al centro */
+    }
+    .skill-card {
+        width: 90%; /* Occupa il 90% dello spazio orizzontale dello schermo */
+        max-width: 100%; /* Rimuove il limite massimo */
+        margin: 0 auto; /* Centra le card */
+    }
+}

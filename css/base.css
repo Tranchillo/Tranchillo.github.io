@@ -1,0 +1,243 @@
+/* Importazione Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+/* Variabili colori */
+:root {
+    --color-white: #fff;
+    --color-text: #333;
+    --color-gray-100: #f8f8f8;
+    --color-gray-200: #f2f2f2;
+    --color-gray-300: #e0e0e0;
+    --color-gray-400: #dedede;
+    --color-gray-500: #d0d0d0;
+    --color-gray-600: #c2c2c2;
+    --header-menu-height: 60px; /* Altezza maggiore per header con maschera */
+}
+
+/* Reset degli stili di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Corpo della pagina */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Blocca lo scorrimento laterale */
+}
+
+/* Titoli */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/* Link */
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #555;
+}
+
+/* Header fisso con maschera di testo */
+.custom-header {
+    position: fixed; /* Mantiene l'header fisso in alto */
+    top: 0;
+    left: 0;
+    width: 100%; /* Occupa tutta la larghezza */
+    height: 60px; /* Altezza configurabile */
+    background-color: #000; /* Sfondo nero per eventuali spazi */
+    z-index: 10; /* Layer condiviso con gli altri elementi */
+}
+
+.header-image {
+    width: 100%; /* L'immagine occupa tutta la larghezza */
+    height: 100%; /* Si adatta all'altezza del contenitore */
+    object-fit: cover; /* Ritaglia l'immagine se necessario per adattarsi */
+    display: block;
+}
+
+/* Menu sotto l'Header */
+nav {
+    position: fixed; /* Mantiene il menu fisso sotto l'header */
+    top: 60px; /* Altezza del header, per posizionare il menu subito sotto */
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 1px 0;
+    z-index: 11; /* Stesso z-index dell'header */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 5px 10px;
+}
+
+nav a.active {
+    background-color: var(--color-gray-200); /* Sfondo grigio chiaro */
+    color: #000; /* Testo nero */
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #888;
+    background-color: var(--color-gray-300);
+}
+
+/* Foto Header */
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Footer */
+footer {
+    position: fixed; /* Mantiene il footer fisso */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0; /* Riduci il padding verticale */
+    border-top: 1px solid #fff;
+    z-index: 10; /* Stesso z-index di Header e Menu */
+    height: 40px; /* Altezza ridotta */
+    display: flex; /* Centra il contenuto */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra orizzontalmente */
+    gap: 10px; /* Distanza tra le icone e il testo */
+}
+
+/* Contenuto principale */
+.main-content {
+    flex: 1;
+    margin-top: calc(var(--header-menu-height) + 20px); /* Compensa l'header e menu */
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.content, .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: transparent;
+}
+
+/* UFO e Mucca */
+#cow-container {
+    position: absolute;
+    bottom: 80px; /* Sopra il footer */
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 300px;
+    height: auto;
+    z-index: 20;
+}
+
+#cow-video {
+    width: 100%;
+    height: auto;
+}
+
+#ufo-container {
+    position: absolute;
+    top: -300px; /* Partenza fuori schermo */
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 300px;
+    z-index: 25;
+}
+
+#ufo-video {
+    width: 100%;
+    display: none;
+}
+
+
+/* Media Queries per design responsivo */
+
+/* Schermi piccoli (smartphone portrait, meno di 576px) */
+@media only screen and (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-image {
+        height: auto;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+}
+
+/* Tablet (da 576px a 768px) */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Schermi grandi (desktop) */
+@media only screen and (min-width: 768px) {
+    .footer-container {
+        justify-content: space-around;
+    }
+}
+
+/* Adattabilità delle immagini e dei video */
+img, video {
+    max-width: 100%;
+    height: auto;
+}

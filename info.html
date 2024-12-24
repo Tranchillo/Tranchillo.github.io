@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="it">
+ <head>
+  <!-- Meta -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Info - Dany Tranchillo</title>
+  <!-- Favicon -->
+   <link rel="icon" href="assets/favicon/favicon-16x16.ico" sizes="16x16" type="image/x-icon">
+   <link rel="icon" href="assets/favicon/favicon-32x32.ico" sizes="32x32" type="image/x-icon">
+   <link rel="icon" href="assets/favicon/favicon-48x48.ico" sizes="48x48" type="image/x-icon">
+  <!-- CSS -->
+   <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/info.css">
+   <link rel="stylesheet" href="css/social.css">
+ </head>
+ <body>
+  <!-- HEADER -->
+<header class="custom-header">
+    <img src="assets/headers/dany-tranchillo.png" alt="Dany Tranchillo" class="header-image">
+</header>
+
+    <!-- MENU -->
+   <nav>
+    <ul>
+     <li><a href="index.html">Home</a></li>
+     <li><a href="chi-sono.html">Chi Sono</a></li>
+     <li><a href="foto.html">Foto</a></li>
+     <li><a href="video.html">Video</a></li>
+	 <li><a href="lora.html">LoRA</a></li>
+     <li><a href="music.html">Music</a></li>
+     <li><a href="info.html" class="active">Info</a></li>
+     <li><a href="servizi.html">Servizi</a></li>
+     <li><a href="utility.html">Utility</a></li>
+    </ul>
+   </nav>
+
+    <!-- CONTENUTO PRINCIPALE -->
+     <main class="content">
+      <div class="main-content">
+       <div class="accordion">
+        <div class="accordion-item">
+         <button class="accordion-header"><img src="assets/icone-info/struttura.png" alt="Icona" />Struttura del sito</button>
+        <div class="accordion-content">
+         <p>La struttura del sito è organizzata in cartelle dedicate per separare file multimediali, fogli di stile, script e contenuti, garantendo una gestione ordinata e facile da aggiornare:</p>
+         <ul>
+          <li><strong><code>assets/</code>:</strong> File multimediali come immagini, icone e contenuti statici.</li>
+          <li><strong><code>css/</code>:</strong> Fogli di stile per personalizzare l'aspetto delle pagine.</li>
+          <li><strong><code>images/</code>:</strong> Immagini organizzate per progetto e sezione.</li>
+          <li><strong><code>js/</code>:</strong> Script JavaScript per funzionalità interattive.</li>
+          <li><strong><code>music/</code>:</strong> La Musica realizzata tramite Suno.</li>
+          <li><strong><code>video/</code>:</strong> Video raggruppati per tipo programma.</li>			
+         </ul>
+        </div>
+       </div>
+	   
+       <div class="accordion-item">
+        <button class="accordion-header"><img src="assets/icone-info/design.png" alt="Icona" />Design del layout</button>	
+        <div class="accordion-content">
+         <p>Il layout del sito è stato progettato per garantire una navigazione intuitiva e un’esperienza utente fluida. Il design include:</p>
+         <ul>
+          <li>Un menu di navigazione chiaro e accessibile da tutte le pagine.</li>
+          <li>Una struttura responsive, ottimizzata per dispositivi desktop e mobili.</li>
+          <li>Stili personalizzati per ogni sezione, mantenendo un aspetto coerente e moderno.</li>
+         </ul>
+        </div>
+       </div>
+
+       <div class="accordion-item">
+	    	   
+        <button class="accordion-header"><img src="assets/icone-info/immagini.png" alt="Icona" />Gestione delle immagini</button>
+        <div class="accordion-content">
+         <p>Le immagini del sito sono gestite attraverso una struttura organizzata e una presentazione visivamente accattivante. Ecco i punti principali:</p>
+         <ul>
+          <li><strong>Ottimizzazione:</strong> Ogni immagine è compressa e ridimensionata per garantire una qualità visiva elevata e tempi di caricamento ridotti.</li>
+          <li><strong>Visualizzazione a "card":</strong> Le immagini sono presentate in gruppi (o "stack") organizzati in una griglia responsiva. Ogni gruppo può essere cliccato per rivelare o spostare immagini, offrendo un'interazione dinamica e coinvolgente.</li>
+          <li><strong>Stile e interattività:</strong> Il design delle "card" utilizza il file <code>foto.css</code> per gestire layout e transizioni fluide, mentre il file <code>foto.js</code> aggiunge interattività come l'espansione e la rotazione delle immagini nei gruppi.</li>
+         </ul>
+        </div>
+       </div>
+
+<div class="accordion-item">
+    <button class="accordion-header"><img src="assets/icone-info/html.png" alt="Icona" />HTML5</button>
+    <div class="accordion-content">
+        <p>Le pagine del sito sono strutturate utilizzando HTML5, garantendo una base semantica solida, accessibilità e compatibilità con i moderni browser:</p>
+        <ul>
+            <li>
+                <strong>Base semantica:</strong> L'uso di tag come <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code> e <code>&lt;footer&gt;</code> migliora la leggibilità e la struttura del contenuto.
+            </li>
+            <li>
+                <strong>Accessibilità:</strong> L'HTML5 facilita l'implementazione di caratteristiche accessibili, migliorando l'esperienza per tutti gli utenti.
+            </li>
+            <li>
+                <strong>Compatibilità:</strong> Il sito è ottimizzato per funzionare su tutti i principali browser moderni.
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="accordion-item">
+    <button class="accordion-header"><img src="assets/icone-info/css.png" alt="Icona" />CSS personalizzati</button>
+    <div class="accordion-content">
+        <p>Il sito utilizza fogli di stile dedicati per ogni sezione, facilitando la gestione e la personalizzazione:</p>
+        <ul>
+            <li>
+                <strong>Struttura modulare:</strong> Ogni file CSS (es. <code>menu.css</code>, <code>foto.css</code>, <code>info.css</code>) è focalizzato su una specifica area o funzionalità.
+            </li>
+            <li>
+                <strong>Base comune:</strong> Il file <code>base.css</code> contiene gli stili globali per garantire coerenza visiva.
+            </li>
+            <li>
+                <strong>Responsività:</strong> Gli stili sono ottimizzati per adattarsi a diverse dimensioni di schermo, garantendo un’esperienza utente fluida su desktop e dispositivi mobili.
+            </li>
+            <li>
+                <strong>Tecnologie avanzate:</strong> Gli stili sfruttano proprietà CSS3 moderne, come transizioni fluide, griglie responsabili e layout flessibili.
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="accordion-item">
+    <button class="accordion-header"><img src="assets/icone-info/js.png" alt="Icona" />JavaScript interattivo</button>
+    <div class="accordion-content">
+        <p>Il sito utilizza script JavaScript dedicati per migliorare l'interattività:</p>
+        <ul>
+            <li>
+                <strong>Accordion dinamico:</strong> Il file <code>info.js</code> gestisce l'apertura e chiusura delle schede informative, permettendo di espandere una voce alla volta.
+            </li>
+            <li>
+                <strong>Riproduzione musicale:</strong> Il file <code>music.js</code> consente di avviare e gestire i brani nella sezione "Music".
+            </li>
+            <li>
+                <strong>Galleria di immagini:</strong> Il file <code>foto.js</code> aggiunge dinamismo alla visualizzazione delle immagini, con stack animati e sfalsati.
+            </li>
+            <li>
+                <strong>Tecnologie moderne:</strong> La logica interattiva è sviluppata con JavaScript moderno, seguendo un approccio modulare per semplificare debugging e manutenzione.
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="accordion-item">
+    <button class="accordion-header"><img src="assets/icone-info/music.png" alt="Icona" />Player musicale</button>
+    <div class="accordion-content">
+        <p>La sezione musicale del sito utilizza un sistema dinamico per gestire la riproduzione dei brani:</p>
+        <ul>
+            <li>
+                <strong>Riproduzione personalizzata:</strong> Ogni brano è associato a un pulsante <em>Play</em> e <em>Stop</em> che controllano un player audio dedicato.
+            </li>
+            <li>
+                <strong>Barra di progresso:</strong> Una barra visiva mostra l'avanzamento della riproduzione per ogni brano.
+            </li>
+            <li>
+                <strong>Gestione dinamica:</strong> Solo un brano può essere riprodotto alla volta, grazie alla logica gestita nel file <code>music.js</code>.
+            </li>
+            <li>
+                <strong>Interfaccia intuitiva:</strong> La disposizione degli elementi e l'integrazione della barra di progresso garantiscono un’esperienza utente fluida e semplice.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="accordion-item">
+    <button class="accordion-header"><img src="assets/icone-info/ufo.png" alt="Icona" />UFO-Cow Abduction</button>
+    <div class="accordion-content">
+        <p>Questa sezione del sito è stata progettata per mostrare un progetto creativo che utilizza animazioni e contenuti multimediali:</p>
+        <ul>
+            <li>
+                <strong>Asset dedicati:</strong> I file multimediali (immagini, video, effetti sonori) sono organizzati nella cartella 
+                <code>assets/ufo-cow-abduction/</code>.
+            </li>
+            <li>
+                <strong>Animazioni:</strong> Le animazioni mostrano una narrazione unica, con effetti visivi e audio sincronizzati.
+            </li>
+            <li>
+                <strong>Struttura personalizzata:</strong> La gestione dei contenuti è ottimizzata per presentare il progetto in modo accattivante e dinamico.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="accordion-item">
+    <button class="accordion-header"><img src="assets/icone-info/progettazione.png" alt="Icona" />Favicons e branding</button>
+    <div class="accordion-content">
+        <p>Il sito incorpora elementi grafici distintivi per garantire un’identità visiva coerente:</p>
+        <ul>
+            <li>
+                <strong>Favicons personalizzati:</strong> Tre dimensioni di icone (<code>16x16</code>, <code>32x32</code>, <code>48x48</code>) sono utilizzate per adattarsi ai diversi contesti di visualizzazione nei browser.
+            </li>
+            <li>
+                <strong>Header immagini:</strong> Ogni sezione include immagini di intestazione che riflettono il tema del contenuto.
+            </li>
+            <li>
+                <strong>Loghi social:</strong> Icone dedicate per i collegamenti ai social network, organizzate nella cartella <code>assets/loghi_social/</code>.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="accordion-item">
+    <button class="accordion-header"><img src="assets/icone-info/video.png" alt="Icona" />Video e multimedia</button>
+    <div class="accordion-content">
+        <p>Il sito integra contenuti video e multimediali per arricchire l'esperienza utente:</p>
+        <ul>
+            <li>
+                <strong>Organizzazione:</strong> I file video sono salvati nella cartella <code>videos/</code> e suddivisi in sottocartelle per progetto (es. <code>ae-videos/</code>, <code>ia-videos/</code>).
+            </li>
+            <li>
+                <strong>Formati ottimizzati:</strong> I video utilizzano formati comuni come MP4 e WEBM per garantire compatibilità e prestazioni.
+            </li>
+            <li>
+                <strong>Progetti unici:</strong> Ogni sezione presenta contenuti multimediali specifici, come animazioni personalizzate e video generati con AI.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="accordion-item">
+    <button class="accordion-header"><img src="assets/icone-info/lora.png" alt="Icona" />Progetti LoRA e Stable Diffusion</button>
+    <div class="accordion-content">
+        <p>Il sito include una sezione dedicata alla generazione di contenuti visivi tramite intelligenza artificiale:</p>
+        <ul>
+            <li>
+                <strong>Immagini generate:</strong> La cartella <code>images/ia-images/</code> contiene immagini create utilizzando Stable Diffusion e tecniche avanzate come LoRA.
+            </li>
+            <li>
+                <strong>Struttura organizzata:</strong> I progetti sono suddivisi in cartelle specifiche, ad esempio <code>project_h4b1t4t/</code> per Habitat o <code>project_coin/</code> per generazioni tematiche.
+            </li>
+            <li>
+                <strong>Focus creativo:</strong> Ogni progetto esplora un aspetto artistico o concettuale unico, utilizzando strumenti di machine learning per espandere le possibilità creative.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="accordion-item">
+    <button class="accordion-header"><img src="assets/icone-info/hosting.png" alt="Icona" />Hosting</button>
+    <div class="accordion-content">
+        <p>Il sito è progettato per garantire una gestione efficiente e un accesso rapido ai contenuti:</p>
+        <ul>
+            <li>
+                <strong>Compatibilità con hosting web:</strong> La struttura è ottimizzata per funzionare su piattaforme di hosting standard, garantendo tempi di caricamento rapidi e affidabilità.
+            </li>
+            <li>
+                <strong>Manutenzione facilitata:</strong> La suddivisione in sezioni rende semplice aggiornare il sito o aggiungere nuovi contenuti.
+            </li>
+        </ul>
+    </div>
+</div>
+
+			 
+            </div>
+           </div>
+    </div>
+</main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <span class="contact-social">Contatti via Social</span>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/tranchillodany" class="social-link" target="_blank"><img src="assets/loghi_social/facebook_logo.png" alt="Facebook Logo"></a>			
+                <a href="https://www.tiktok.com/@tranchillo" class="social-link" target="_blank"><img src="assets/loghi_social/tiktok_logo.png" alt="TikTok Logo"></a>
+                <a href="https://www.youtube.com/@tranchillo" class="social-link" target="_blank"><img src="assets/loghi_social/youtube_logo.png" alt="YouTube Logo"></a>
+                <a href="https://www.instagram.com/danytranchillo/" class="social-link" target="_blank"><img src="assets/loghi_social/instagram_logo.png" alt="Instagram Logo"></a>
+                <a href="https://x.com/danytranchillo" class="social-link" target="_blank"><img src="assets/loghi_social/x_logo.png" alt="X Logo"></a>
+                <a href="https://soundcloud.com/tranchillo" class="social-link" target="_blank"><img src="assets/loghi_social/soundcloud_logo.png" alt="SoundCloud Logo"></a>
+                <a href="https://civitai.com/user/Tranchillo" class="social-link" target="_blank"><img src="assets/loghi_social/civitai_logo.png" alt="Civitai Logo"></a>
+                <a href="https://github.com/Tranchillo" class="social-link" target="_blank"><img src="assets/loghi_social/github_logo.png" alt="GitHub Logo"></a>
+                <a href="https://www.reddit.com/user/Tranchillo/" class="social-link" target="_blank"><img src="assets/loghi_social/reddit_logo.png" alt="Reddit Logo"></a>		
+            </div>
+            <div class="footer-right">
+                <p><nobr>© 2024 Dany Tranchillo. Tutti i diritti riservati.</nobr></p>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="js/info.js"></script>  		
+ </body>
+</html>
+

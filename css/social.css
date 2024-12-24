@@ -1,0 +1,43 @@
+footer {
+    background-color: #000; /* Sfondo nero */
+    color: #fff; /* Testo bianco */
+    padding: 20px 10px;
+    border-top: 1px solid #fff;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Distribuisce gli elementi */
+    align-items: center;
+    flex-wrap: wrap; /* Adatta gli elementi su più righe se necessario */
+    gap: 10px; /* Spaziatura tra gli elementi */
+}
+
+.footer-left {
+    flex: 1; /* Occupa lo spazio a sinistra */
+    text-align: left; /* Allinea a sinistra */
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center; /* Centra le icone */
+    align-items: center;
+    flex-wrap: wrap; /* Permette alle icone di andare a capo se necessario */
+    gap: 15px; /* Spazio maggiore tra le icone */
+}
+
+.footer-right {
+    flex: 1; /* Occupa lo spazio a destra */
+    text-align: right; /* Allinea a destra */
+    font-size: 0.8rem;
+}
+
+.social-link img {
+    width: auto; /* Mantiene proporzioni originali */
+    max-width: 30px; /* Limita la dimensione massima */
+    height: auto;
+}
+
+.social-link img:hover {
+    transform: scale(1.1); /* Effetto zoom al passaggio del mouse */
+}

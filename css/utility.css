@@ -1,0 +1,19 @@
+.accordion-header.editing-audio {
+    color: #1E90FF; /* Blu */
+}
+
+.accordion-header.editing-design {
+    color: #32CD32; /* Verde */
+}
+
+.accordion-header.video-animation {
+    color: #FFA500; /* Arancione */
+}
+
+.accordion-header.text-generation {
+    color: #800080; /* Viola */
+}
+
+.accordion-header.utility-tools {
+    color: #FF4500; /* Rosso */
+}

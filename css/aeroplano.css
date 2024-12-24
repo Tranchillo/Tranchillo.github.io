@@ -1,0 +1,25 @@
+#aeroplanino-container {
+    position: fixed;
+    top: 25%; /* Centra verticalmente */
+    right: -110%; /* Inizia fuori dallo schermo */
+    height: 100px;
+    width: auto;
+    z-index: 101;
+    transform: translateY(-50%); /* Centra verticalmente */
+    animation: plane-animation 7s ease-in-out 3s forwards;
+}
+
+@keyframes plane-animation {
+    0% {
+        right: -100%; /* Fuori dallo schermo */
+    }
+    100% {
+        right: 50%; /* Fermati al centro */
+        transform: translateX(50%); /* Centra orizzontalmente */
+    }
+}
+
+#aeroplanino {
+    height: 100%;
+    width: auto;
+}

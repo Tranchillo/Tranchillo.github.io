@@ -1,0 +1,75 @@
+/* Galleria fotografica */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Adatta i mazzi su righe diverse se lo schermo è stretto */
+    gap: 20px; /* Spazio tra i mazzi */
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Ogni gruppo fotografico */
+.photo-group {
+    position: relative;
+    width: 200px; /* Larghezza del mazzo */
+    height: 300px; /* Altezza del mazzo */
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Stile del mazzo di carte */
+.photo-stack {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease-in-out; /* Transizione fluida tra stati */
+}
+
+/* Stili generali per le immagini */
+.photo-stack img {
+    position: absolute;
+    width: 90%; /* Riduci leggermente la larghezza */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, z-index 0.3s ease;
+}
+
+/* Stato chiuso: sfalsamento minore */
+.photo-stack.closed img {
+    transform: translate(var(--offset-closed), var(--offset-closed));
+}
+
+/* Stato aperto: sfalsamento maggiore */
+.photo-stack.open img {
+    transform: translate(var(--offset-open), var(--offset-open));
+}
+
+/* Offset variabili per lo sfalsamento */
+.photo-stack img:nth-child(1) {
+    --offset-closed: 5px;
+    --offset-open: 10px;
+    z-index: 3;
+}
+.photo-stack img:nth-child(2) {
+    --offset-closed: 5px;
+    --offset-open: 10px;
+    z-index: 2;
+}
+.photo-stack img:nth-child(3) {
+    --offset-closed: 5px;
+    --offset-open: 10px;
+    z-index: 1;
+}
+
+/* Titolo del gruppo */
+.photo-group-title {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}

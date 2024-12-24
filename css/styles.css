@@ -1,0 +1,78 @@
+nav {
+    position: fixed;
+    top: 60px;
+    left: 0; /* Assicuriamoci che parta dal bordo sinistro */
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 0;
+    z-index: 11;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Nasconde la scrollbar su Firefox */
+}
+
+/* Nasconde la scrollbar su Chrome/Safari */
+nav::-webkit-scrollbar {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start; /* Allinea gli elementi a sinistra */
+    margin: 0;
+    padding: 0 15px; /* Aumentato il padding laterale */
+    gap: 10px;
+    min-width: min-content; /* Assicura che il contenuto non venga compresso */
+    white-space: nowrap;
+}
+
+nav li {
+    margin: 0;
+    flex-shrink: 0; /* Impedisce la compressione degli elementi */
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    display: block;
+    white-space: nowrap; /* Impedisce il wrapping del testo */
+    border-radius: 5px;
+}
+
+nav li a.active {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Media query per schermi piccoli */
+@media (max-width: 576px) {
+    nav {
+        top: 60px; /* Mantiene l'allineamento con l'header */
+    }
+
+    nav ul {
+        padding: 0 10px; /* Ridotto leggermente il padding laterale */
+        gap: 8px;
+    }
+    
+    nav li a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+}
+
+/* Media query per schermi medi */
+@media (min-width: 577px) and (max-width: 768px) {
+    nav ul {
+        gap: 8px;
+    }
+    
+    nav li a {
+        font-size: 0.87rem;
+        padding: 7px 11px;
+    }
+}
