@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Explorer Local</title>
+    <style>
+        ul { list-style-type: none; }
+        li { margin-left: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Directory Explorer</h1>
+    <div id="directory-container"></div>
+    <script>
+        const renderDirectory = async (path = ".", parent = document.getElementById("directory-container")) => {
+            try {
+                const response = await fetch(path);
+                if (response.ok) {
+                    const text = await response.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(text, "text/html");
+                    const links = doc.querySelectorAll("a");
+                    const ul = document.createElement("ul");
+
+                    for (const link of links) {
+                        const li = document.createElement("li");
+                        const href = link.getAttribute("href");
+                        li.textContent = href;
+                        ul.appendChild(li);
+
+                        if (href.endsWith("/")) {
+                            // Chiamata ricorsiva per le sottodirectory
+                            li.textContent = href.replace(/\/$/, "");
+                            const nestedDiv = document.createElement("div");
+                            li.appendChild(nestedDiv);
+                            renderDirectory(href, nestedDiv);
+                        }
+                    }
+
+                    parent.appendChild(ul);
+                } else {
+                    throw new Error(`Unable to load directory: ${response.statusText}`);
+                }
+            } catch (error) {
+                console.error("Error loading directory:", error);
+                parent.textContent = "Could not load directory.";
+            }
+        };
+
+        renderDirectory();
+    </script>
+</body>
+</html>
